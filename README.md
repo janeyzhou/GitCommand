@@ -1,4 +1,4 @@
-hello, ci1
+hello, ci2
 =======
 
 Test projects for Git training
