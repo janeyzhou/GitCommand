@@ -1,4 +1,4 @@
-hello, ci2
+hello, ci2 with schedule job
 =======
 
 Test projects for Git training
