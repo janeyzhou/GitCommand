@@ -1,0 +1,58 @@
+This final project is aimed to test the UI and API for Fashe website.
+
+Project Introduction:
+1. Setup folder is used to set the required plugins for pipeline env
+2. Both API and UI use the same config file, the config file defined domain for different, later maybe add other field
+3. Both API and UI reuse Utils functions
+4. For UI project, the test entrance is start.py
+   the test case execution will read the 'test_case_runner.csv' to determine the test browser, account and test case
+   We assume to run test case parallel, still under investigation, now we can run test case in single thread
+
+
+How to prepare your test environment:
+1. Pull the latest code from http://localhost/janeyzhou/team1.git
+2. Check if you have all the required packages, please refer 'required packages.txt', if any package is missing, please run setup.bat
+3. Set python file description, setting -> Editor -> Code Style -> File and Code Templates -> Select python script, you can also refer the existing python file as tempalte
+
+
+About code:
+1. Please keep file name and class name as same
+2. Module name should be lower case
+3. Please add comment to class, function, the special variable and  the specified code section
+4. Please add py file description at the begining
+5. Widgets folder is under Pages folder, extract the common component on each page
+6. On pages and widget, only support locator, element action functions, is element displayed, total amount elements, url and some special field
+7. On business flow, make several actions of one page to one flow, add data transfer function(product details, find element by name, find element by index), verification
+8. On test case, we will refer business flow the most, except some special verification relay on previous steps (Please think more about those part)
+9. When your debug is pass, your test running failed, the it must be the loading issue, please add sleep time to some slow loading page
+10. Please add try catch to your function that will get unexpected error
+11. For API, please also add common module to handle the Intermediate data and function, e.g get id by slug
+12. Please add logging.info to your flow, so we can see what's happened in the log, but avoid multi-same log
+13. Please log test data in your test case and step
+
+
+About locate element:
+1. check if the element is in a frame
+2. check if the located element is a Pseudo-element, if yes, please locate it from it's parent
+3. For each page locator, please test it before start your test case
+
+
+About code management:
+1. Pull the latest code and then create your own branch(like, JaneyZhou) to develop your test script
+2. Before push your code to master, please pull the latest code first and fix the conflict if any, and then push
+3. Please add clear comment for each commit
+
+
+Automation environment:
+1. pip install -r requirment_plug.txt
+2. pip install pytest-allure -> download allure to jenkins server -> set allure commandline in jenkins -> add allure report stage(please make sure the generate report path is same with the alluredir)
+    run test case: pytest -v -s -k xxx --alluredir=API/reports
+    allure report: allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [[key: 'Allure', value: 'C:/allure-commandline-2.13.5/allure-2.13.5/']],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'UI/reports'],[path: 'API/reports']]
+            ])
+3. Add try catch exception to jenkins file to handle the failed test case (exit 0), and continue other stage
+

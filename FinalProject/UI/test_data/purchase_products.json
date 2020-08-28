@@ -1,0 +1,57 @@
+{
+  "Purchase Products": {
+    "Products": [
+      {
+        "Page": "Shop",
+        "Product Name": "Aaa",
+        "Size": "M",
+        "Color": "Red",
+        "Quantity": 1
+      }
+    ],
+    "Address": {
+      "Billing Address": "shenzhen,xili",
+      "Country": "China",
+      "City": "Yangon",
+      "Zip": "51800"
+    },
+    "Payment Info": {
+      "Card ID": "card 3530 1113 3330 0000",
+      "Expired Date": "02/23",
+      "CVC": "242",
+      "Payment Type": "PayPal"
+    }
+  },
+  "Continue Shop": {
+    "Products": [
+      {
+        "Page": "Shop",
+        "Product Name": "Aaa",
+        "Size": "M",
+        "Color": "Red",
+        "Quantity": 1
+      }
+    ]
+  },
+  "Edit product in orderSummary": {
+    "Products": [
+      {
+        "Page": "Shop",
+        "Product Name": "Aaa",
+        "Size": "M",
+        "Color": "Red",
+        "Quantity": 1
+      },
+      {
+        "Page": "Shop",
+        "Product Name": "Bbb",
+        "Size": "L",
+        "Color": "Black",
+        "Quantity": 2
+      }
+    ],
+    "Added Amount": 1,
+    "Added Index": 1,
+    "Removed Index": 2
+  }
+}

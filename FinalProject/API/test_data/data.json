@@ -1,0 +1,12 @@
+{
+  "User Account": {
+    "username": "j_zhou",
+    "password": "123456"
+  },
+  "Test Items": {"slug": "aaa"},
+  "Test Card Items": {
+    "slug": "bbb",
+    "quantity": 3
+  },
+  "Test Order Items": {"slug": "bbb"}
+}
